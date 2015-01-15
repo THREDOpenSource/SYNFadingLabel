@@ -10,29 +10,19 @@
 Pod::Spec.new do |s|
   s.name             = "SYNFadingLabel"
   s.version          = "0.1.0"
-  s.summary          = "A short description of SYNFadingLabel."
-  s.description      = <<-DESC
-                       An optional longer description of SYNFadingLabel
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SYNFadingLabel"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.summary          = "A simple label with UIVisualEffectView vibrancy that automatically fades away."
+  s.description      = "SYNFadingLabel is a UIView subclass that you can easily drop in to interface builder. Set the text on the label and it will display, then fade away after a configurable delay. Great for showing pagination like *1 / 1 pages*"
+  s.homepage         = "https://github.com/Syntertainment/SYNFadingLabel"
+  s.screenshots      = "Pod/Screenshots/screenshot.png"
   s.license          = 'MIT'
   s.author           = { "Sidhant Gandhi" => "sidhantg@syntertainment.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SYNFadingLabel.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/Syntertainment/SYNFadingLabel.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  s.resource_bundles = {
-    'SYNFadingLabel' => ['Pod/Assets/*.png']
-  }
+  s.resources =  ['Pod/Classes/SYNFadingLabel.xib']
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
 end

@@ -1,6 +1,5 @@
 # SYNFadingLabel
 
-[![CI Status](http://img.shields.io/travis/Sidhant Gandhi/SYNFadingLabel.svg?style=flat)](https://travis-ci.org/Sidhant Gandhi/SYNFadingLabel)
 [![Version](https://img.shields.io/cocoapods/v/SYNFadingLabel.svg?style=flat)](http://cocoadocs.org/docsets/SYNFadingLabel)
 [![License](https://img.shields.io/cocoapods/l/SYNFadingLabel.svg?style=flat)](http://cocoadocs.org/docsets/SYNFadingLabel)
 [![Platform](https://img.shields.io/cocoapods/p/SYNFadingLabel.svg?style=flat)](http://cocoadocs.org/docsets/SYNFadingLabel)
@@ -9,7 +8,32 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+-----
+To use SYNFadingLabel, create a view in storyboard and set its class to `SYNFadingLabel`.
+
+After creating an outlet, configure it like so:
+
+````
+self.fadingLabel.backgroundColor = [UIColor clearColor];
+[self.fadingLabel configureWithFont:[UIFont fontWithName:@"AvenirNext-Regular" 
+                               size:16] 
+                          fadeDelay:2.5 
+                       fadeDuration:0.3];
+````
+
+To make the label appear, just set its text:
+
+````
+[self.fadingLabel setText:@"page %@ / %@", curPage, totalPages];
+
+````
+The label will automatically fade away after the set delay.
+
+-----
+
 ## Requirements
+
+iOS 8 (UIVisualEffectsView)
 
 ## Installation
 
@@ -25,4 +49,3 @@ Sidhant Gandhi, sidhantg@syntertainment.com
 ## License
 
 SYNFadingLabel is available under the MIT license. See the LICENSE file for more info.
-

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="SYNViewController" sceneMemberID="viewController">
@@ -15,13 +15,70 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="3kH-z6-8W6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8z-0f-APV" customClass="SYNFadingLabel">
+                                <rect key="frame" x="110" y="100" width="100" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8Sk-be-NW3"/>
+                                    <constraint firstAttribute="width" constant="100" id="cUY-qr-XSf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9DE-CJ-YXm" customClass="SYNFadingLabel">
+                                <rect key="frame" x="80" y="190" width="160" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="487-QF-KD4"/>
+                                    <constraint firstAttribute="width" constant="160" id="qSc-cW-xIa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to show label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4R-1k-CkD">
+                                <rect key="frame" x="73" y="525" width="175" height="31"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3kH-z6-8W6" secondAttribute="bottom" id="244-oP-kwd"/>
+                            <constraint firstItem="9DE-CJ-YXm" firstAttribute="top" secondItem="z8z-0f-APV" secondAttribute="bottom" constant="50" id="59K-Zq-4gU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="V4R-1k-CkD" secondAttribute="bottom" constant="12" id="5Gr-lv-Aaz"/>
+                            <constraint firstAttribute="centerX" secondItem="9DE-CJ-YXm" secondAttribute="centerX" id="Bop-sA-HNZ"/>
+                            <constraint firstAttribute="trailing" secondItem="3kH-z6-8W6" secondAttribute="trailing" id="LFD-6z-ZZ5"/>
+                            <constraint firstItem="3kH-z6-8W6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UY1-Mb-ooU"/>
+                            <constraint firstAttribute="centerX" secondItem="z8z-0f-APV" secondAttribute="centerX" id="Vhi-QW-040"/>
+                            <constraint firstItem="3kH-z6-8W6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="h9G-je-hiw"/>
+                            <constraint firstItem="z8z-0f-APV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="jF7-Ly-gNh"/>
+                            <constraint firstAttribute="centerX" secondItem="V4R-1k-CkD" secondAttribute="centerX" id="kgT-yL-vLp"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Gtd-ut-CQj" appends="YES" id="raM-gJ-SQt"/>
+                        </connections>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="bigFadingLabel" destination="9DE-CJ-YXm" id="2nJ-W2-Gjb"/>
+                        <outlet property="smallFadingLabel" destination="z8z-0f-APV" id="gKc-W3-oIG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gtd-ut-CQj">
+                    <connections>
+                        <action selector="tapped:" destination="vXZ-lx-hvc" id="pTU-Dk-4hU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="470" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stars.jpeg" width="1669" height="2494"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

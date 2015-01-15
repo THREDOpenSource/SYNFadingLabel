@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class SYNFadingLabel;
 @interface SYNViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet SYNFadingLabel *bigFadingLabel;
+@property (weak, nonatomic) IBOutlet SYNFadingLabel *smallFadingLabel;
 
 @end
