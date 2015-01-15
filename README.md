@@ -13,20 +13,20 @@ To use SYNFadingLabel, create a view in storyboard and set its class to `SYNFadi
 
 After creating an outlet, configure it like so:
 
-````
+```objc
 self.fadingLabel.backgroundColor = [UIColor clearColor];
 [self.fadingLabel configureWithFont:[UIFont fontWithName:@"AvenirNext-Regular" 
                                size:16] 
                           fadeDelay:2.5 
                        fadeDuration:0.3];
-````
+```
 
 To make the label appear, just set its text:
 
-````
+```objc
 [self.fadingLabel setText:@"page %@ / %@", curPage, totalPages];
+```
 
-````
 The label will automatically fade away after the set delay.
 
 -----
