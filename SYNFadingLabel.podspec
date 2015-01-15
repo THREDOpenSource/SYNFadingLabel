@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SYNFadingLabel"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A simple label with UIVisualEffectView vibrancy that automatically fades away."
   s.description      = "SYNFadingLabel is a UIView subclass that you can easily drop in to interface builder. Set the text on the label and it will display, then fade away after a configurable delay. Great for showing pagination like *1 / 1 pages*"
   s.homepage         = "https://github.com/Syntertainment/SYNFadingLabel"
