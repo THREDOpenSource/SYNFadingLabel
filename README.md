@@ -6,6 +6,7 @@
 
 ## Screenshot
 ![screenshot](Pod/Screenshots/screenshot.png)
+![animated](Pod/Screenshots/animated.gif)
 
 ## Usage
 
